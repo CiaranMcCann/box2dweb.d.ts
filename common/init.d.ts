@@ -1,3 +1,3 @@
-module Box2D.Common.Math { }
+module Box2D.Common { }
 
-import b2Math = Box2D.Common.Math;
+import b2Common = Box2D.Common;
