@@ -80,6 +80,4 @@
 /// <reference path="Dynamics/Joints/b2JointDef.d.ts" />
 /// <reference path="Dynamics/Joints/b2JointEdge.d.ts" />
 
-module Box2D {
-
-}
+module Box2D { }

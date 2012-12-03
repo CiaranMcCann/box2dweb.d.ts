@@ -1,10 +1,9 @@
+/// <reference path="../../Common/Math/init.d.ts" />
 /// <reference path="../../Common/Math/b2Transform.d.ts" />
 /// <reference path="../../Common/Math/b2Vec2.d.ts" />
 /// <reference path="../b2AABB.d.ts" />
 /// <reference path="b2MassData.d.ts" />
 /// <reference path="b2Shape.d.ts" />
-
-//import b2Math = Box2D.Common.Math;
 
 module Box2D.Collision.Shapes {
 

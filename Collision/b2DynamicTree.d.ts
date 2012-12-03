@@ -1,3 +1,4 @@
+/// <reference path="../Common/Math/init.d.ts" />
 /// <reference path="../Common/Math/b2Vec2.d.ts" />
 /// <reference path="b2AABB.d.ts" />
 /// <reference path="b2DynamicTreeNode.d.ts" />

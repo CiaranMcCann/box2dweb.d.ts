@@ -1,3 +1,4 @@
+/// <reference path="../Common/Math/init.d.ts" />
 /// <reference path="../Common/Math/b2Vec2.d.ts" />
 
 module Box2D.Collision {

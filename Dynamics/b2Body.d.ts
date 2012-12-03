@@ -1,5 +1,7 @@
+/// <reference path="../Common/Math/init.d.ts" />
 /// <reference path="../Common/Math/b2Vec2.d.ts" />
 /// <reference path="../Common/Math/b2Transform.d.ts" />
+/// <reference path="../Collision/Shapes/init.d.ts" />
 /// <reference path="../Collision/Shapes/b2Shape.d.ts" />
 /// <reference path="../Collision/Shapes/b2MassData.d.ts" />
 /// <reference path="b2BodyDef.d.ts" />
