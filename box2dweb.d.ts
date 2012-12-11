@@ -70,6 +70,7 @@
 /// <reference path="Dynamics/b2Body.d.ts" />
 /// <reference path="Dynamics/b2BodyDef.d.ts" />
 /// <reference path="Dynamics/b2DebugDraw.d.ts" />
+/// <reference path="Dynamics/b2FilterData.d.ts" />
 /// <reference path="Dynamics/b2Fixture.d.ts" />
 /// <reference path="Dynamics/b2FixtureDef.d.ts" />
 /// <reference path="Dynamics/b2World.d.ts" />
