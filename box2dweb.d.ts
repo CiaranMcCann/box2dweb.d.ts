@@ -7,7 +7,7 @@
 //     https://github.com/jbaldwin/box2d.d.ts
 
 /*
-* Box2DWeb.d.ts Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin
+* Box2DWeb.d.ts Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin/box2dweb.d.ts
 * Box2D C++ Copyright (c) 2006-2007 Erin Catto http://www.gphysics.com
 *
 * This software is provided 'as-is', without any express or implied
@@ -17,11 +17,11 @@
 * including commercial applications, and to alter it and redistribute it
 * freely, subject to the following restrictions:
 * 1. The origin of this software must not be misrepresented; you must not
-* claim that you wrote the original software. If you use this software
-* in a product, an acknowledgment in the product documentation would be
-* appreciated but is not required.
+*    claim that you wrote the original software. If you use this software
+*    in a product, an acknowledgment in the product documentation would be
+*    appreciated but is not required.
 * 2. Altered source versions must be plainly marked as such, and must not be
-* misrepresented as being the original software.
+*    misrepresented as being the original software.
 * 3. This notice may not be removed or altered from any source distribution.
 */
 
@@ -73,6 +73,7 @@
 /// <reference path="Dynamics/b2ContactImpulse.d.ts" />
 /// <reference path="Dynamics/b2ContactListener.d.ts" />
 /// <reference path="Dynamics/b2DebugDraw.d.ts" />
+/// <reference path="Dynamics/b2DestructionListener.d.ts" />
 /// <reference path="Dynamics/b2FilterData.d.ts" />
 /// <reference path="Dynamics/b2Fixture.d.ts" />
 /// <reference path="Dynamics/b2FixtureDef.d.ts" />
