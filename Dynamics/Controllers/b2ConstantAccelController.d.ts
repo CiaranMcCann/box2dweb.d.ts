@@ -5,9 +5,9 @@
 module Box2D.Dynamics.Controllers {
 
 	/**
-	* Calculates buoyancy forces for fluids in the form of a half plane.
+	* Applies an acceleration every frame, like gravity
 	**/
-	export class b2BuoyancyController extends b2Controller {
+	export class b2ConstantAccelController extends b2Controller {
 
 		/**
 		* The acceleration to apply.
