@@ -63,7 +63,7 @@ module Box2D.Dynamics.Controllers {
 
 		/**
 		* Step
-		* @step b2TimeStep -> Private internal class.
+		* @step b2TimeStep -> Private internal class.  Not sure why this is exposed.
 		**/
 		public Step(step: any/*b2TimeStep*/): void;
 	}
