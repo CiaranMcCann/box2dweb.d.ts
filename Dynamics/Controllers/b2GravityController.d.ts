@@ -1,5 +1,3 @@
-/// <reference path="../../Common/Math/init.d.ts" />
-/// <reference path="../../Common/Math/b2Vec2.d.ts" />
 /// <reference path="b2Controller.d.ts" />
 
 module Box2D.Dynamics.Controllers {
