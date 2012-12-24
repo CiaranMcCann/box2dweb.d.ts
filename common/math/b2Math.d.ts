@@ -72,33 +72,205 @@ module Box2D.Common.Math {
 		public static CrossFV(s: number, a: b2Vec2): b2Vec2;
 
 		/**
-		* 
+		* Multiply matrix and vector.
+		* @A Matrix.
+		* @v Vector.
+		* @return Result.
 		**/
 		public static MulMV(A: b2Mat22, v: b2Vec2): b2Vec2;
+
+		/**
+		* 
+		* @A
+		* @v
+		* @return
+		**/
 		public static MulTMV(A: b2Mat22, v: b2Vec2): b2Vec2;
+
+		/**
+		* 
+		* @T
+		* @v
+		* @return
+		**/
 		public static MulX(T: b2Transform, v: b2Vec2): b2Vec2;
+
+		/**
+		* 
+		* @T
+		* @v
+		* @return
+		**/
 		public static MulXT(T: b2Transform, v: b2Vec2): b2Vec2;
+
+		/**
+		* Adds two vectors.
+		* @a First vector.
+		* @b Second vector.
+		* @return a + b.
+		**/
 		public static AddVV(a: b2Vec2, b: b2Vec2): b2Vec2;
+
+		/**
+		* Subtracts two vectors.
+		* @a First vector.
+		* @b Second vector.
+		* @return a - b.
+		**/
 		public static SubtractVV(a: b2Vec2, b: b2Vec2): b2Vec2;
+
+		/**
+		* Calculates the distance between two vectors.
+		* @a First vector.
+		* @b Second vector.
+		* @return Distance between a and b.
+		**/
 		public static Distance(a: b2Vec2, b: b2Vec2): number;
+
+		/**
+		* Calculates the squared distance between two vectors.
+		* @a First vector.
+		* @b Second vector.
+		* @return dist^2 between a and b.
+		**/
 		public static DistanceSquared(a: b2Vec2, b: b2Vec2): number;
+
+		/**
+		* 
+		* @s
+		* @a
+		* @return
+		**/
 		public static MulFV(s: number, a: b2Vec2): b2Vec2;
+
+		/**
+		* 
+		* @A
+		* @B
+		* @return
+		**/
 		public static AddMM(A: b2Mat22, B: b2Mat22): b2Mat22;
+
+		/**
+		* 
+		* @A
+		* @B
+		* @return
+		**/
 		public static MulMM(A: b2Mat22, B: b2Mat22): b2Mat22;
+
+		/**
+		* 
+		* @A
+		* @B
+		* @return
+		**/
 		public static MulTMM(A: b2Mat22, B: b2Mat22): b2Mat22;
+
+		/**
+		* Creates an ABS number.
+		* @a Number to ABS.
+		* @return Absolute value of a.
+		**/
 		public static Abs(a: number): number;
+
+		/**
+		* Creates an ABS vector.
+		* @a Vector to ABS all values.
+		* @return Vector with all positive values.
+		**/
 		public static AbsV(a: b2Vec2): b2Vec2;
+
+		/**
+		* Creates an ABS matrix.
+		* @A Matrix to ABS all values.
+		* @return Matrix with all positive values.
+		**/
 		public static AbsM(A: b2Mat22): b2Mat22;
+
+		/**
+		* Determines the minimum number.
+		* @a First number.
+		* @b Second number.
+		* @return a or b depending on which is the minimum.
+		**/
 		public static Min(a: number, b: number): number;
+
+		/**
+		* Determines the minimum vector.
+		* @a First vector.
+		* @b Second vector.
+		* @return a or b depending on which is the minimum.
+		**/
 		public static MinV(a: b2Vec2, b: b2Vec2): b2Vec2;
+
+		/**
+		* Determines the max number.
+		* @a First number.
+		* @b Second number.
+		* @return a or b depending on which is the maximum.
+		**/
 		public static Max(a: number, b: number): number;
+
+		/**
+		* Determines the max vector.
+		* @a First vector.
+		* @b Second vector.
+		* @return a or b depending on which is the maximum.
+		**/
 		public static MaxV(a: b2Vec2, b: b2Vec2): b2Vec2;
+
+		/**
+		* Clamp a number to the range of low to high.
+		* @a Number to clamp.
+		* @low Low range.
+		* @high High range.
+		* @return Number a clamped to range of low to high.
+		**/
 		public static Clamp(a: number, low: number, high: number): number;
+
+		/**
+		* Clamps a vector to the range of low to high.
+		* @a Vector to clamp.
+		* @low Low range.
+		* @high High range.
+		* @return Vector a clamped to range of low to high.
+		**/
 		public static ClampV(a: b2Vec2, low: b2Vec2, high: b2Vec2): b2Vec2;
+
+		/**
+		* Swaps a and b objects.
+		* @a a -> b.
+		* @b b -> a.
+		**/
 		public static Swap(a: any, b: any): void;
+
+		/**
+		* Generates a random number.
+		* @return Random number.
+		**/
 		public static Random(): number;
+
+		/**
+		* Returns a random number between lo and hi.
+		* @lo Lowest random number.
+		* @hi Highest random number.
+		* @return Number between lo and hi.
+		**/
 		public static RandomRange(lo: number, hi: number): number;
+
+		/**
+		* Calculates the next power of 2 after the given number.
+		* @x Number to start search for the next power of 2.
+		* @return The next number that is a power of 2.
+		**/
 		public static NextPowerOfTwo(x: number): number;
+
+		/**
+		* Check if a number is a power of 2.
+		* @x Number to check if it is a power of 2.
+		* @return True if x is a power of 2, otherwise false.
+		**/
 		public static IsPowerOfTwo(x: number): bool;
 
 		/**
