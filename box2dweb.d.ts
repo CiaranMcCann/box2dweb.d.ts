@@ -1,13 +1,9 @@
-//     box2dweb-2.1.d.ts
-//     Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin
-//     There are a few competing javascript Box2D ports.
-//     This definitions file is for Box2dWeb.js ->
-//         http://code.google.com/p/box2dweb/
-//     For all details and documentation:
-//     https://github.com/jbaldwin/box2d.d.ts
-
-/*
-* Box2DWeb.d.ts Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin/box2dweb.d.ts
+/**
+* Box2DWeb-2.1.d.ts Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin/box2dweb.d.ts
+* There are a few competing javascript Box2D ports.
+* This definitions file is for Box2dWeb.js ->
+*   http://code.google.com/p/box2dweb/
+*
 * Box2D C++ Copyright (c) 2006-2007 Erin Catto http://www.gphysics.com
 *
 * This software is provided 'as-is', without any express or implied
@@ -23,7 +19,7 @@
 * 2. Altered source versions must be plainly marked as such, and must not be
 *    misrepresented as being the original software.
 * 3. This notice may not be removed or altered from any source distribution.
-*/
+**/
 
 /// <reference path="Common/init.d.ts" />
 /// <reference path="Common/b2Color.d.ts" />
