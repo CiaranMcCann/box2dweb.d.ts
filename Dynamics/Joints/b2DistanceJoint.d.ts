@@ -50,7 +50,7 @@ module Box2D.Dynamics.Joints {
 		* Get the reaction torque on body 2 in N.
 		* @return Reaction torque in N.
 		**/
-		public GetReactionTorque(inv_dt: number); number;
+		public GetReactionTorque(inv_dt: number): number;
 
 		/**
 		* Sets the damping ratio.
