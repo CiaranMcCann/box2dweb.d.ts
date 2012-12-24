@@ -44,7 +44,7 @@ module Box2D.Dynamics.Joints {
 		* @inv_dt
 		* @return Reaction force in N.
 		**/
-		public GetReactionForce(inv_dt: number); b2Math.b2Vec2;
+		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
 
 		/**
 		* Get the reaction torque on body 2 in N.
