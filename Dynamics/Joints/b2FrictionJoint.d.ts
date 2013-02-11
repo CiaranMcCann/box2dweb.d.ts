@@ -68,7 +68,7 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Get the reaction force on body2 at the joint anchor in N.
-		* @inv_dt
+		* @param inv_dt
 		* @return Reaction force in N.
 		**/
 		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
@@ -81,13 +81,13 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Sets the max force.
-		* @force New max force.
+		* @param force New max force.
 		**/
 		public SetMaxForce(force: number): void;
 
 		/**
 		* Sets the max torque.
-		* @torque New max torque.
+		* @param torque New max torque.
 		**/
 		public SetMaxTorque(torque: number): void;
 	}

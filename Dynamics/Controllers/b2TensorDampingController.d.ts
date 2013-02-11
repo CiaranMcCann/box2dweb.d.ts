@@ -45,14 +45,13 @@ module Box2D.Dynamics.Controllers {
 
 		/**
 		* Helper function to set T in a common case.
-		* @xDamping x
-		* @yDamping y
+		* @param xDamping x
+		* @param yDamping y
 		**/
 		public SetAxisAligned(xDamping: number, yDamping: number): void;
 
 		/**
-		* Step.
-		* @step Internal b2TimeStep structure.
+		* @see b2Controller.Step
 		**/
 		public Step(step: any/* b2TimeStep*/): void;
 	}

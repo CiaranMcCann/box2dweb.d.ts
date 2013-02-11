@@ -53,7 +53,7 @@ module Box2D.Collision {
 
 		/**
 		* Sets the Contact ID from a Contact ID.
-		* @id The Contact ID to copy values from.
+		* @param id The Contact ID to copy values from.
 		**/
 		public Set(id: b2ContactID): void;
 	}

@@ -66,23 +66,24 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Given a transform, compute the associated axis aligned bounding box for this shape.
-		* @aabb Calculated AABB, this argument is `out`.
-		* @xf Transform to calculate the AABB.
+		* @param aabb Calculated AABB, this argument is `out`.
+		* @param xf Transform to calculate the AABB.
 		**/
 		public ComputeAABB(aabb: b2AABB, xf: b2Math.b2Transform): void;
 
 		/**
 		* Compute the mass properties of this shape using its dimensions and density. The inertia tensor is computed about the local origin, not the centroid.
-		* @massData Calculate the mass, this argument is `out`.
+		* @param massData Calculate the mass, this argument is `out`.
+		* @param density Density.
 		**/
 		public ComputeMass(massData: b2MassData, density: number): void;
 
 		/**
 		* Compute the volume and centroid of this shape intersected with a half plane
-		* @normal The surface normal.
-		* @offset The surface offset along the normal.
-		* @xf The shape transform.
-		* @c The centroid, this argument is `out`.
+		* @param normal The surface normal.
+		* @param offset The surface offset along the normal.
+		* @param xf The shape transform.
+		* @param c The centroid, this argument is `out`.
 		**/
 		public ComputeSubmergedArea(
 			normal: b2Math.b2Vec2,
@@ -102,10 +103,10 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Cast a ray against this shape.
-		* @output Ray cast results, this argument is `out`.
-		* @input Ray cast input parameters.
-		* @transform The transform to be applied to the shape.
-		* @return True if the ray hits the shape, otherwise false.
+		* @param output Ray cast results, this argument is `out`.
+		* @param input Ray cast input parameters.
+		* @param transform The transform to be applied to the shape.
+		* @param return True if the ray hits the shape, otherwise false.
 		**/
 		public RayCast(
 			output: b2RayCastOutput,
@@ -114,16 +115,16 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Set the shape values from another shape.
-		* @other The other shape to copy values from.
+		* @param other The other shape to copy values from.
 		**/
 		public Set(other: b2Shape): void;
 
 		/**
 		* Test if two shapes overlap with the applied transforms.
-		* @shape1 shape to test for overlap with shape2.
-		* @transform1 shape1 transform to apply.
-		* @shape2 shape to test for overlap with shape1.
-		* @transform2 shape2 transform to apply.
+		* @param shape1 shape to test for overlap with shape2.
+		* @param transform1 shape1 transform to apply.
+		* @param shape2 shape to test for overlap with shape1.
+		* @param transform2 shape2 transform to apply.
 		* @return True if shape1 and shape2 overlap, otherwise false.
 		**/
 		public static TestOverlap(
@@ -134,8 +135,8 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Test a point for containment in this shape. This only works for convex shapes.
-		* @xf Shape world transform.
-		* @p Point to test against, in world coordinates.
+		* @param xf Shape world transform.
+		* @param p Point to test against, in world coordinates.
 		* @return True if the point is in this shape, otherwise false.
 		**/
 		public TestPoint(xf: b2Math.b2Transform, p: b2Math.b2Vec2): bool;

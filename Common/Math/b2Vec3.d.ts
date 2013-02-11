@@ -45,15 +45,15 @@ module Box2D.Common.Math {
 
 		/**
 		* Construct using coordinates x,y,z.
-		* @x x value, default = 0.
-		* @y y value, default = 0.
-		* @z z value, default = 0.
+		* @param x x value, default = 0.
+		* @param y y value, default = 0.
+		* @param z z value, default = 0.
 		**/
 		constructor (x?: number, y?: number, z?: number);
 
 		/**
 		* Adds the vector 3 to this vector 3.  The result is stored in this vector 3.
-		* @v Vector 3 to add.
+		* @param v Vector 3 to add.
 		**/
 		public Add(v: b2Vec3): void;
 
@@ -71,7 +71,7 @@ module Box2D.Common.Math {
 
 		/**
 		* Vector multiplication.  Stores the result in this vector 3.
-		* @a Value to multiple the vector's values by.
+		* @param a Value to multiple the vector's values by.
 		**/
 		public Multiply(a: number): void;
 
@@ -82,15 +82,15 @@ module Box2D.Common.Math {
 
 		/**
 		* Sets the vector 3.
-		* @x x value, default is 0.
-		* @y y value, default is 0.
-		* @z z value, default is 0.
+		* @param x x value, default is 0.
+		* @param y y value, default is 0.
+		* @param z z value, default is 0.
 		**/
 		public Set(x?: number, y?: number, z?: number): void;
 
 		/**
 		* Sets the vector 3 from a vector 3.
-		* @v Vector 3 to copy values from.
+		* @param v Vector 3 to copy values from.
 		**/
 		public SetV(v: b2Vec3): void;
 
@@ -101,7 +101,7 @@ module Box2D.Common.Math {
 
 		/**
 		* Subtracts the vector 3 from this vector 3.  The result is stored in this vector 3.
-		* @v Vector 3 to subtract.
+		* @param v Vector 3 to subtract.
 		**/
 		public Subtract(v: b2Vec3): void;
 	}

@@ -74,14 +74,14 @@ module Box2D.Common.Math {
 
 		/**
 		* Get the interpolated transform at a specific time.
-		* @xf Transform at specified time, this is an out parameter.
-		* @alpha Is a factor in [0,1], where 0 indicates t0.
+		* @param xf Transform at specified time, this is an out parameter.
+		* @param alpha Is a factor in [0,1], where 0 indicates t0.
 		**/
 		public GetTransform(xf: b2Transform, alpha: number): void;
 
 		/**
 		* Sets the sweep from a sweep.
-		* @other Sweep values to copy from.
+		* @param other Sweep values to copy from.
 		**/
 		public Set(other: b2Sweep): void;
 	}

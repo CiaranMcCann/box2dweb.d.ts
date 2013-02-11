@@ -42,8 +42,7 @@ module Box2D.Dynamics.Controllers {
 		public invSqr: bool;
 
 		/**
-		* Step.
-		* @step Internal b2TimeStep structure.
+		* @see b2Controller.Step
 		**/
 		public Step(step: any/* b2TimeStep*/): void;
 	}

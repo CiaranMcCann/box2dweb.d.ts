@@ -48,9 +48,9 @@ module Box2D.Collision {
 		
 		/**
 		* Creates a new ray cast input.
-		* @p1 Start point of the ray, default = null.
-		* @p2 End point of the ray, default = null.
-		* @maxFraction Truncate the ray to reach up to this fraction from p1 to p2.
+		* @param p1 Start point of the ray, default = null.
+		* @param p2 End point of the ray, default = null.
+		* @param maxFraction Truncate the ray to reach up to this fraction from p1 to p2.
 		**/
 		constructor (p1?: b2Math.b2Vec2, p2?: b2Math.b2Vec2, maxFraction?: number);
 	}

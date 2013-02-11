@@ -35,7 +35,7 @@ module Box2D.Dynamics {
 		* @note This function is not in the box2dweb.as code -- might not work.
 		* @see b2World.Raycast()
 		* @see b2ContactFilter.ShouldCollide()
-		* @userData User provided data.  Comments indicate that this might be a b2Fixture.
+		* @param userData User provided data.  Comments indicate that this might be a b2Fixture.
 		* @return True if the fixture should be considered for ray intersection, otherwise false.
 		**/
 		public RayCollide(userData: any): bool;
@@ -43,8 +43,8 @@ module Box2D.Dynamics {
 		/**
 		* Return true if contact calculations should be performed between these two fixtures.
 		* @warning For performance reasons this is only called when the AABBs begin to overlap.
-		* @fixtureA b2Fixture potentially colliding with fixtureB.
-		* @fixtureB b2Fixture potentially colliding with fixtureA.
+		* @param fixtureA b2Fixture potentially colliding with fixtureB.
+		* @param fixtureB b2Fixture potentially colliding with fixtureA.
 		* @return True if fixtureA and fixtureB probably collide requiring more calculations, otherwise false.
 		**/
 		public ShouldCollide(fixtureA: b2Fixture, fixtureB: b2Fixture): bool;

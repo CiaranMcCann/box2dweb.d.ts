@@ -66,10 +66,10 @@ module Box2D.Dynamics.Joints {
 		
 		/**
 		* Initialize the bodies, anchors, and length using the world anchors.
-		* @bA Body A.
-		* @bB Body B.
-		* @anchorA Anchor A.
-		* @anchorB Anchor B.
+		* @param bA Body A.
+		* @param bB Body B.
+		* @param anchorA Anchor A.
+		* @param anchorB Anchor B.
 		**/
 		public Initialize(bA: b2Body, bB: b2Body, anchorA: b2Math.b2Vec2, anchorB: b2Math.b2Vec2): void;
 	}

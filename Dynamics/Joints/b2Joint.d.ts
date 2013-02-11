@@ -64,14 +64,14 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Get the reaction force on body2 at the joint anchor in Newtons.
-		* @inv_dt 
+		* @param inv_dt 
 		* @return Reaction force (N)
 		**/
 		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
 
 		/**
 		* Get the reaction torque on body2 in N.
-		* @inv_dt
+		* @param inv_dt
 		* @return Reaction torque (N).
 		**/
 		public GetReactionTorque(inv_dt: number): number;
@@ -96,7 +96,7 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Set the user data pointer.
-		* @data Your custom data.
+		* @param data Your custom data.
 		**/
 		public SetUserData(data: any); void;
 	}

@@ -59,28 +59,28 @@ module Box2D.Dynamics {
 
 		/**
 		* Apply a force at a world point. If the force is not applied at the center of mass, it will generate a torque and affect the angular velocity. This wakes up the body.
-		* @force The world force vector, usually in Newtons (N).
-		* @point The world position of the point of application.
+		* @param force The world force vector, usually in Newtons (N).
+		* @param point The world position of the point of application.
 		**/
 		public ApplyForce(force: b2Math.b2Vec2, point: b2Math.b2Vec2): void;
 
 		/**
 		* Apply an impulse at a point. This immediately modifies the velocity. It also modifies the angular velocity if the point of application is not at the center of mass. This wakes up the body.
-		* @impules The world impulse vector, usually in N-seconds or kg-m/s.
-		* @point The world position of the point of application.
+		* @param impules The world impulse vector, usually in N-seconds or kg-m/s.
+		* @param point The world position of the point of application.
 		**/
 		public ApplyImpulse(impulse: b2Math.b2Vec2, point: b2Math.b2Vec2): void;
 
 		/**
 		* Apply a torque. This affects the angular velocity without affecting the linear velocity of the center of mass. This wakes up the body.
-		* @torque Force applied about the z-axis (out of the screen), usually in N-m.
+		* @param torque Force applied about the z-axis (out of the screen), usually in N-m.
 		**/
 		public ApplyTorque(torque: number): void;
 
 		/**
 		* Creates a fixture and attach it to this body. Use this function if you need to set some fixture parameters, like friction. Otherwise you can create the fixture directly from a shape. If the density is non-zero, this function automatically updates the mass of the body. Contacts are not created until the next time step.
 		* @warning This function is locked during callbacks.
-		* @def The fixture definition;
+		* @param def The fixture definition;
 		* @return The created fixture.
 		**/
 		public CreateFixture(def: b2FixtureDef): b2Fixture;
@@ -88,8 +88,8 @@ module Box2D.Dynamics {
 		/**
 		* Creates a fixture from a shape and attach it to this body. This is a convenience function. Use b2FixtureDef if you need to set parameters like friction, restitution, user data, or filtering. This function automatically updates the mass of the body.
 		* @warning This function is locked during callbacks.
-		* @shape The shaped of the fixture (to be cloned).
-		* @density The shape density, default is 0.0, set to zero for static bodies.
+		* @param shape The shaped of the fixture (to be cloned).
+		* @param density The shape density, default is 0.0, set to zero for static bodies.
 		* @return The created fixture.
 		**/
 		public CreateFixture2(shape: b2Shapes.b2Shape, density?: number): b2Fixture;
@@ -97,7 +97,7 @@ module Box2D.Dynamics {
 		/**
 		* Destroy a fixture. This removes the fixture from the broad-phase and destroys all contacts associated with this fixture. This will automatically adjust the mass of the body if the body is dynamic and the fixture has positive density. All fixtures attached to a body are implicitly destroyed when the body is destroyed.
 		* @warning This function is locked during callbacks.
-		* @fixture The fixed to be removed.
+		* @param fixture The fixed to be removed.
 		**/
 		public DestroyFixture(fixture: b2Fixture): void;
 
@@ -170,14 +170,14 @@ module Box2D.Dynamics {
 
 		/**
 		* Get the world velocity of a local point.
-		* @localPoint Point in local coordinates.
+		* @param localPoint Point in local coordinates.
 		* @return The world velocity of the point.
 		**/
 		public GetLinearVelocityFromLocalPoint(localPoint: b2Math.b2Vec2): b2Math.b2Vec2;
 
 		/**
 		* Get the world linear velocity of a world point attached to this body.
-		* @worldPoint Point in world coordinates.
+		* @param worldPoint Point in world coordinates.
 		* @return The world velocity of the point.
 		**/
 		public GetLinearVelocityFromWorldPoint(worldPoint: b2Math.b2Vec2): b2Math.b2Vec2;
@@ -190,14 +190,14 @@ module Box2D.Dynamics {
 
 		/**
 		* Gets a local point relative to the body's origin given a world point.
-		* @worldPoint Pointin world coordinates.
+		* @param worldPoint Pointin world coordinates.
 		* @return The corresponding local point relative to the body's origin.
 		**/
 		public GetLocalPoint(worldPoint: b2Math.b2Vec2): b2Math.b2Vec2;
 
 		/**
 		* Gets a local vector given a world vector.
-		* @worldVector World vector.
+		* @param worldVector World vector.
 		* @return The corresponding local vector.
 		**/
 		public GetLocalVector(worldVector: b2Math.b2Vec2): b2Math.b2Vec2;
@@ -210,7 +210,7 @@ module Box2D.Dynamics {
 
 		/**
 		* Get the mass data of the body. The rotational inertial is relative to the center of mass.
-		* @data Body's mass data, this argument is `out`.
+		* @param data Body's mass data, this argument is `out`.
 		**/
 		public GetMassData(data: b2Shapes.b2MassData): void;
 
@@ -258,14 +258,14 @@ module Box2D.Dynamics {
 
 		/**
 		* Get the world coordinates of a point given the local coordinates.
-		* @localPoint Point on the body measured relative to the body's origin.
+		* @param localPoint Point on the body measured relative to the body's origin.
 		* @return localPoint expressed in world coordinates.
 		**/
 		public GetWorldPoint(localPoint: b2Math.b2Vec2): b2Math.b2Vec2;
 
 		/**
 		* Get the world coordinates of a vector given the local coordinates.
-		* @localVector Vector fixed in the body.
+		* @param localVector Vector fixed in the body.
 		* @return localVector expressed in world coordinates.
 		**/
 		public GetWorldVector(localVector: b2Math.b2Vec2): b2Math.b2Vec2;
@@ -313,105 +313,106 @@ module Box2D.Dynamics {
 
 		/**
 		* Set the active state of the body. An inactive body is not simulated and cannot be collided with or woken up. If you pass a flag of true, all fixtures will be added to the broad-phase. If you pass a flag of false, all fixtures will be removed from the broad-phase and all contacts will be destroyed. Fixtures and joints are otherwise unaffected. You may continue to create/destroy fixtures and joints on inactive bodies. Fixtures on an inactive body are implicitly inactive and will not participate in collisions, ray-casts, or queries. Joints connected to an inactive body are implicitly inactive. An inactive body is still owned by a b2World object and remains in the body list.
-		* @flag True to activate, false to deactivate.
+		* @param flag True to activate, false to deactivate.
 		**/
 		public SetActive(flag: bool): void;
 
 		/**
 		* Set the world body angle
-		* @angle New angle of the body.
+		* @param angle New angle of the body.
 		**/
 		public SetAngle(angle: number): void;
 
 		/**
 		* Set the angular damping of the body.
-		* @angularDamping New angular damping value.
+		* @param angularDamping New angular damping value.
 		**/
 		public SetAngularDamping(angularDamping: number): void;
 
 		/**
 		* Set the angular velocity.
-		* @omega New angular velocity in radians/second.
+		* @param omega New angular velocity in radians/second.
 		**/
 		public SetAngularVelocity(omega: number): void;
 
 		/**
 		* Set the sleep state of the body. A sleeping body has vety low CPU cost.
-		* @flag True to set the body to awake, false to put it to sleep.
+		* @param flag True to set the body to awake, false to put it to sleep.
 		**/
 		public SetAwake(flag: bool): void;
 
 		/**
 		* Should this body be treated like a bullet for continuous collision detection?
-		* @flag True for bullet, false for normal.
+		* @param flag True for bullet, false for normal.
 		**/
 		public SetBullet(flag: bool): void;
 
 		/**
 		* Set this body to have fixed rotation. This causes the mass to be reset.
-		* @fixed True for no rotation, false to allow for rotation.
+		* @param fixed True for no rotation, false to allow for rotation.
 		**/
 		public SetFixedRotation(fixed: bool): void;
 
 		/**
 		* Set the linear damping of the body.
-		* @linearDamping The new linear damping for this body.
+		* @param linearDamping The new linear damping for this body.
 		**/
 		public SetLinearDamping(linearDamping: number): void;
 
 		/**
 		* Set the linear velocity of the center of mass.
-		* @v New linear velocity of the center of mass.
+		* @param v New linear velocity of the center of mass.
 		**/
 		public SetLinearVelocity(v: b2Math.b2Vec2): void;
 
 		/**
 		* Set the mass properties to override the mass properties of the fixtures Note that this changes the center of mass position. Note that creating or destroying fixtures can also alter the mass. This function has no effect if the body isn't dynamic.
 		* @warning The supplied rotational inertia should be relative to the center of mass.
-		* @massData New mass data properties.
+		* @param massData New mass data properties.
 		**/
 		public SetMassData(massData: b2Shapes.b2MassData): void;
 
 		/**
 		* Set the world body origin position.
-		* @position New world body origin position.
+		* @param position New world body origin position.
 		**/
 		public SetPosition(position: b2Math.b2Vec2): void;
 
 		/**
 		* Set the position of the body's origin and rotation (radians). This breaks any contacts and wakes the other bodies.
-		* @position New world body origin position.
-		* @angle New world rotation angle of the body in radians.
+		* @param position New world body origin position.
+		* @param angle New world rotation angle of the body in radians.
 		**/
 		public SetPositionAndAngle(position: b2Math.b2Vec2, angle: number): void;
 
 		/**
 		* Is this body allowed to sleep
-		* @flag True if the body can sleep, false if not.
+		* @param flag True if the body can sleep, false if not.
 		**/
 		public SetSleepingAllowed(flag: bool): void;
 
 		/**
 		* Set the position of the body's origin and rotation (radians). This breaks any contacts and wakes the other bodies. Note this is less efficient than the other overload - you should use that if the angle is available.
-		* @xf Body's origin and rotation (radians).
+		* @param xf Body's origin and rotation (radians).
 		**/
 		public SetTransform(xf: b2Math.b2Transform): void;
 
 		/**
 		* Set the type of this body. This may alter the mass and velocity
-		* @type Type enum.
+		* @param type Type enum.
 		**/
 		public SetType(type: number): void;
 
 		/**
 		* Set the user data. Use this to store your application specific data.
-		* @data The user data for this body.
+		* @param data The user data for this body.
 		**/
 		public SetUserData(data: any): void;
 
 		/**
 		* Splits a body into two, preserving dynamic properties
 		* @note This provides a feature specific to this port.
+		* @param callback 
 		* @return The newly created bodies from the split.
 		**/
 		public Split(callback: (fixture: b2Fixture) => bool): b2Body;

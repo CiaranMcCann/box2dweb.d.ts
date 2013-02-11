@@ -44,27 +44,27 @@ module Box2D.Collision {
 
 		/**
 		* Extends or clips the segment so that it's ends lie on the boundary of the AABB.
-		* @aabb AABB to extend/clip the segement.
+		* @param aabb AABB to extend/clip the segement.
 		**/
 		public Extend(aabb: b2AABB): void;
 
 		/**
 		* See Extend, this works on the ending point.
-		* @aabb AABB to extend/clip the ending point.
+		* @param aabb AABB to extend/clip the ending point.
 		**/
 		public ExtendBackward(aabb: b2AABB): void;
 
 		/**
 		* See Extend, this works on the starting point.
-		* @aabb AABB to extend/clip the starting point.
+		* @param aabb AABB to extend/clip the starting point.
 		**/
 		public ExtendForward(aabb: b2AABB): void;
 
 		/**
 		* Ray cast against this segment with another segment.
-		* @lambda returns the hit fraction. You can use this to compute the contact point * p = (1 - lambda) * segment.p1 + lambda * segment.p2 * @normal Normal at the contact point.  If there is no intersection, the normal is not set.
-		* @segment Defines the begining and end point of the ray cast.
-		* @maxLambda a number typically in the range [0,1].
+		* @param lambda returns the hit fraction. You can use this to compute the contact point * p = (1 - lambda) * segment.p1 + lambda * segment.p2 * @normal Normal at the contact point.  If there is no intersection, the normal is not set.
+		* @param segment Defines the begining and end point of the ray cast.
+		* @param maxLambda a number typically in the range [0,1].
 		* @return True if there is an intersection, otherwise false.
 		**/
 		public TestSegment(

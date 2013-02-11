@@ -50,11 +50,11 @@ module Box2D.Collision {
 
 		/**
 		* Evaluate the manifold with supplied transforms. This assumes modest motion from the original state. This does not change the point count, impulses, etc. The radii must come from the shapes that generated the manifold.
-		* @manifold Manifold to evaluate.
-		* @xfA A transform.
-		* @radiusA A radius.
-		* @xfB B transform.
-		* @radiusB B radius.
+		* @param manifold Manifold to evaluate.
+		* @param xfA A transform.
+		* @param radiusA A radius.
+		* @param xfB B transform.
+		* @param radiusB B radius.
 		**/
 		public Initialize(
 			manifold: b2Manifold,

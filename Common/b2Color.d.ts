@@ -51,17 +51,17 @@ module Box2D.Common {
 
 		/**
 		* Constructor
-		* @rr Red value
-		* @gg Green value
-		* @bb Blue value
+		* @param rr Red value
+		* @param gg Green value
+		* @param bb Blue value
 		**/
 		constructor (rr: number, gg: number, bb: number);
 
 		/**
 		* Sets the Color to new RGB values.
-		* @rr Red value
-		* @gg Green value
-		* @bb Blue value
+		* @param rr Red value
+		* @param gg Green value
+		* @param bb Blue value
 		**/
 		public Set(rr: number, gg: number, bb: number): void;
 	}

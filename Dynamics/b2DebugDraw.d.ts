@@ -75,60 +75,60 @@ module Box2D.Dynamics {
 
 		/**
 		* Append flags to the current flags.
-		* @flags Flags to add.
+		* @param flags Flags to add.
 		**/
 		public AppendFlags(flags:number): void;
 
 		/**
 		* Clear flags from the current flags.
-		* @flags flags to clear.
+		* @param flags flags to clear.
 		**/
 		public ClearFlags(flags:number): void;
 
 		/**
 		* Draw a circle.
-		* @center Circle center point.
-		* @radius Circle radius.
-		* @color Circle draw color.
+		* @param center Circle center point.
+		* @param radius Circle radius.
+		* @param color Circle draw color.
 		**/
 		public DrawCircle(center: b2Math.b2Vec2, radius: number, color: b2Common.b2Color): void;
 
 		/**
 		* Draw a closed polygon provided in CCW order.
-		* @vertices Polygon verticies.
-		* @vertexCount Number of vertices in the polygon, usually vertices.length.
-		* @color Polygon draw color.
+		* @param vertices Polygon verticies.
+		* @param vertexCount Number of vertices in the polygon, usually vertices.length.
+		* @param color Polygon draw color.
 		**/
 		public DrawPolygon(vertices: b2Math.b2Vec2[], vertexCount:number, color: b2Common.b2Color): void;
 
 		/**
 		* Draw a line segment.
-		* @p1 Line beginpoint.
-		* @p2 Line endpoint.
-		* @color Line color.
+		* @param p1 Line beginpoint.
+		* @param p2 Line endpoint.
+		* @param color Line color.
 		**/
 		public DrawSegment(p1: b2Math.b2Vec2, p2: b2Math.b2Vec2, color: b2Common.b2Color): void;
 
 		/**
 		* Draw a solid circle.
-		* @center Circle center point.
-		* @radius Circle radius.
-		* @axis Circle axis.
-		* @color Circle color.
+		* @param center Circle center point.
+		* @param radius Circle radius.
+		* @param axis Circle axis.
+		* @param color Circle color.
 		**/
 		public DrawSolidCircle(center: b2Math.b2Vec2, radius: number, axis: b2Math.b2Vec2, color: b2Common.b2Color): void;
 
 		/**
 		* Draw a solid closed polygon provided in CCW order.
-		* @vertices Polygon verticies.
-		* @vertexCount Number of vertices in the polygon, usually vertices.length.
-		* @color Polygon draw color.
+		* @param vertices Polygon verticies.
+		* @param vertexCount Number of vertices in the polygon, usually vertices.length.
+		* @param color Polygon draw color.
 		**/
 		public DrawSolidPolygon(vertices: b2Math.b2Vec2[], vertexCount:number, color: b2Common.b2Color): void;
 
 		/**
 		* Draw a transform. Choose your own length scale.
-		* @xf Transform to draw.
+		* @param xf Transform to draw.
 		**/
 		public DrawTransform(xf: b2Math.b2Transform): void;
 
@@ -177,44 +177,44 @@ module Box2D.Dynamics {
 
 		/**
 		* Set the alpha value used for lines.
-		* @alpha Alpha value for drawing lines.
+		* @param alpha Alpha value for drawing lines.
 		**/
 		public SetAlpha(alpha: number): void;
 
 		/**
 		* Set the draw scale.
-		* @drawScale Draw scale ratio.
+		* @param drawScale Draw scale ratio.
 		**/
 		public SetDrawScale(drawScale: number): void;
 
 		/**
 		* Set the alpha value used for fills.
-		* @alpha Alpha value for drawing fills.
+		* @param alpha Alpha value for drawing fills.
 		**/
 		public SetFillAlpha(alpha: number): void;
 
 		/**
 		* Set the drawing flags.
-		* @flags Sets the drawing flags.
+		* @param flags Sets the drawing flags.
 		**/
 		public SetFlags(flags: number): void;
 
 		/**
 		* Set the line thickness.
-		* @lineThickness The new line thickness.
+		* @param lineThickness The new line thickness.
 		**/
 		public SetLineThickness(lineThickness: number): void;
 
 		/**
 		* Set the HTML Canvas Element for drawing.
 		* @note box2dflash uses Sprite object, box2dweb uses CanvasRenderingContext2D, that is why this function is called SetSprite().
-		* @canvas HTML Canvas Element to draw debug information to.
+		* @param canvas HTML Canvas Element to draw debug information to.
 		**/
 		public SetSprite(canvas: CanvasRenderingContext2D): void;
 
 		/**
 		* Set the scale used for drawing XForms.
-		* @xformScale The transform scale.
+		* @param xformScale The transform scale.
 		**/
 		public SetXFormScale(xformScale: number): void;
 	}

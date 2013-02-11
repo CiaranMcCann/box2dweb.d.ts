@@ -1,5 +1,5 @@
 /**
-* Box2DWeb-2.1.d.ts Copyright (c) 2012 Josh Baldwin http://github.com/jbaldwin/box2dweb.d.ts
+* Box2DWeb-2.1.d.ts Copyright (c) 2012-2013 Josh Baldwin http://github.com/jbaldwin/box2dweb.d.ts
 * There are a few competing javascript Box2D ports.
 * This definitions file is for Box2dWeb.js ->
 *   http://code.google.com/p/box2dweb/

@@ -85,9 +85,9 @@ module Box2D.Dynamics.Joints {
 		
 		/**
 		* Initialize the bodies, achors, and reference angle using the world anchor.
-		* @bA Body A.
-		* @bB Body B.
-		* @anchor Anchor.
+		* @param bA Body A.
+		* @param bB Body B.
+		* @param anchor Anchor.
 		**/
 		public Initialize(bA: b2Body, bB: b2Body, anchor: b2Math.b2Vec2): void;
 	}

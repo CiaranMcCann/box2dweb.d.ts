@@ -30,6 +30,7 @@ module Box2D.Common {
 
 		/**
 		* b2Assert is used internally to handle assertions. By default, calls are commented out to save performance, so they serve more as documentation than anything else.
+		* @param a Asset an expression is true.
 		**/
 		public static b2Assert(a: bool): void;
 
@@ -37,8 +38,8 @@ module Box2D.Common {
 		* Friction mixing law. Feel free to customize this.
 		* Friction values are usually set between 0 and 1. (0 = no friction, 1 = high friction)
 		* By default this is `return Math.sqrt(friction1, friction2);`
-		* @friction1 Friction 1 to mix.
-		* @friction2 Friction 2 to mix.
+		* @param friction1 Friction 1 to mix.
+		* @param friction2 Friction 2 to mix.
 		* @return The two frictions mixed as one value.
 		**/
 		public static b2MixFriction(friction1: number, friction2: number): number;
@@ -47,8 +48,8 @@ module Box2D.Common {
 		* Restitution mixing law. Feel free to customize this.  Restitution is used to make objects bounce.
 		* Restitution values are usually set between 0 and 1. (0 = no bounce (inelastic), 1 = perfect bounce (perfectly elastic))
 		* By default this is `return Math.Max(restitution1, restitution2);`
-		* @restitution1 Restitution 1 to mix.
-		* @restitution2 Restitution 2 to mix.
+		* @param restitution1 Restitution 1 to mix.
+		* @param restitution2 Restitution 2 to mix.
 		* @return The two restitutions mixed as one value.
 		**/
 		public static b2MixRestitution(restitution1: number, restitution2: number): number;

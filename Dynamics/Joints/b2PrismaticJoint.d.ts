@@ -34,13 +34,13 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Enable/disable the joint limit.
-		* @flag True to enable, false to disable.
+		* @param flag True to enable, false to disable.
 		**/
 		public EnableLimit(flag: bool): void;
 
 		/**
 		* Enable/disable the joint motor.
-		* @flag True to enable, false to disable.
+		* @param flag True to enable, false to disable.
 		**/
 		public EnableMotor(flag: bool): void;
 
@@ -88,13 +88,14 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Get the reaction force on body2 at the joint anchor in N.
-		* @inv_dt
+		* @param inv_dt
 		* @return Reaction force in N.
 		**/
 		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
 
 		/**
 		* Get the reaction torque on body 2 in N.
+		* @param inv_dt
 		* @return Reaction torque in N.
 		**/
 		public GetReactionTorque(inv_dt: number): number;
@@ -119,20 +120,20 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Set the joint limits, usually in meters.
-		* @lower Lower limit.
-		* @upper Upper limit.
+		* @param lower Lower limit.
+		* @param upper Upper limit.
 		**/
 		public SetLimits(lower: number, upper: number): void;
 
 		/**
 		* Set the maximum motor force, usually in N.
-		* @force New max force.
+		* @param force New max force.
 		**/
 		public SetMaxMotorForce(force: number): void;
 
 		/**
 		* Set the motor speed, usually in meters per second.
-		* @speed New motor speed.
+		* @param speed New motor speed.
 		**/
 		public SetMotorSpeed(speed: number): void;
 	}

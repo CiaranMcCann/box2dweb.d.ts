@@ -72,7 +72,7 @@ module Box2D.Dynamics {
 
 		/**
 		* Get the mass data for this fixture. The mass data is based on the density and the shape. The rotational inertia is about the shape's origin. This operation may be expensive.
-		* @massData This is a reference to a valid b2MassData, if it is null a new b2MassData is allocated and then returned.  Default = null.
+		* @param massData This is a reference to a valid b2MassData, if it is null a new b2MassData is allocated and then returned.  Default = null.
 		* @return Mass data.
 		**/
 		public GetMassData(massData?: b2Shapes.b2MassData): b2Shapes.b2MassData;
@@ -115,51 +115,51 @@ module Box2D.Dynamics {
 
 		/**
 		* Perform a ray cast against this shape.
-		* @output Ray cast results.  This argument is out.
-		* @input Ray cast input parameters.
+		* @param output Ray cast results.  This argument is out.
+		* @param input Ray cast input parameters.
 		* @return True if the ray hits the shape, otherwise false.
 		**/
 		public RayCast(output: b2Collision.b2RayCastOutput, input: b2Collision.b2RayCastInput): bool;
 
 		/**
 		* Set the density of this fixture. This will _not_ automatically adjust the mass of the body. You must call b2Body::ResetMassData to update the body's mass.
-		* @density The new density.
+		* @param density The new density.
 		**/
 		public SetDensity(density: number): void;
 
 		/**
 		* Set the contact filtering data. This will not update contacts until the next time step when either parent body is active and awake.
-		* @filter The new filter data.
+		* @param filter The new filter data.
 		**/
 		public SetFilterData(filter: any): void;
 
 		/**
 		* Set the coefficient of friction.
-		* @friction The new friction coefficient.
+		* @param friction The new friction coefficient.
 		**/
 		public SetFriction(friction: number): void;
 
 		/**
 		* Get the coefficient of restitution.
-		* @resitution The new restitution coefficient.
+		* @param resitution The new restitution coefficient.
 		**/
 		public SetRestitution(restitution: number): void;
 
 		/**
 		* Set if this fixture is a sensor.
-		* @sensor True to set as a sensor, false to not be a sensor.
+		* @param sensor True to set as a sensor, false to not be a sensor.
 		**/
 		public SetSensor(sensor: bool): void;
 
 		/**
 		* Set the user data. Use this to store your application specific data.
-		* @data User provided data.
+		* @param data User provided data.
 		**/
 		public SetUserData(data: any): void;
 
 		/**
 		* Test a point for containment in this fixture.
-		* @p Point to test against, in world coordinates.
+		* @param p Point to test against, in world coordinates.
 		* @return True if the point is in this shape, otherwise false.
 		**/
 		public TestPoint(p: b2Math.b2Vec2): bool;

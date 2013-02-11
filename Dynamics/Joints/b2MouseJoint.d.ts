@@ -64,13 +64,14 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Get the reaction force on body2 at the joint anchor in N.
-		* @inv_dt
+		* @param inv_dt
 		* @return Reaction force in N.
 		**/
 		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
 
 		/**
 		* Get the reaction torque on body 2 in N.
+		* @param inv_dt
 		* @return Reaction torque in N.
 		**/
 		public GetReactionTorque(inv_dt: number): number;
@@ -83,25 +84,25 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Sets the damping ratio.
-		* @ratio New damping ratio.
+		* @param ratio New damping ratio.
 		**/
 		public SetDampingRatio(ratio: number): void;
 
 		/**
 		* Sets the frequency.
-		* @hz New frequency (hertz).
+		* @param hz New frequency (hertz).
 		**/
 		public SetFrequency(hz: number): void;
 
 		/**
 		* Sets the max force.
-		* @maxForce New max force.
+		* @param maxForce New max force.
 		**/
 		public SetMaxForce(maxForce: number): void;
 
 		/**
 		* Use this to update the target point.
-		* @target New target.
+		* @param target New target.
 		**/
 		public SetTarget(target: b2Math.b2Vec2): void;
 	}

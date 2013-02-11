@@ -45,7 +45,7 @@ module Box2D.Dynamics.Controllers {
 
 		/**
 		* Adds a body to the controller.
-		* @body Body to add.
+		* @param body Body to add.
 		**/
 		public AddBody(body: b2Body): void;
 
@@ -56,7 +56,7 @@ module Box2D.Dynamics.Controllers {
 
 		/**
 		* Debug drawing.
-		* @debugDraw Handle to drawer.
+		* @param debugDraw Handle to drawer.
 		**/
 		public Draw(debugDraw: b2DebugDraw): void;
 
@@ -80,13 +80,13 @@ module Box2D.Dynamics.Controllers {
 
 		/**
 		* Removes a body from the controller.
-		* @body Body to remove from this controller.
+		* @param body Body to remove from this controller.
 		**/
 		public RemoveBody(body: b2Body): void;
 
 		/**
 		* Step
-		* @step b2TimeStep -> Private internal class.  Not sure why this is exposed.
+		* @param step b2TimeStep -> Private internal class.  Not sure why this is exposed.
 		**/
 		public Step(step: any/*b2TimeStep*/): void;
 	}

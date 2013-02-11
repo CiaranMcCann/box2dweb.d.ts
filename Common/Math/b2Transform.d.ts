@@ -43,8 +43,8 @@ module Box2D.Common.Math {
 
 		/**
 		* The default constructor does nothing (for performance).
-		* @pos Position
-		* @r Rotation
+		* @param pos Position
+		* @param r Rotation
 		**/
 		constructor (pos: b2Vec2, r: b2Mat22);
 
@@ -56,14 +56,14 @@ module Box2D.Common.Math {
 
 		/**
 		* Initialize using a position vector and rotation matrix.
-		* @pos Position
-		* @r Rotation
+		* @param pos Position
+		* @param r Rotation
 		**/
 		public Initialize(pos: b2Vec2, r: b2Mat22): void;
 
 		/**
 		* Sets the transfrom from a transfrom.
-		* @x Transform to copy values from.
+		* @param x Transform to copy values from.
 		**/
 		public Set(x: b2Transform): void;
 

@@ -33,13 +33,13 @@ module Box2D.Dynamics {
 
 		/**
 		* Called when any fixture is about to be destroyed due to the destruction of its parent body.
-		* @fixture b2Fixture being destroyed.
+		* @param fixture b2Fixture being destroyed.
 		**/
 		public SayGoodbyeFixture(fixture: b2Fixture): void;
 
 		/**
 		* Called when any joint is about to be destroyed due to the destruction of one of its attached bodies.
-		* @joint b2Joint being destroyed.
+		* @param joint b2Joint being destroyed.
 		**/
 		public SayGoodbyeJoint(joint: Joints.b2Joint): void;
 	}

@@ -70,6 +70,7 @@ module Box2D.Dynamics.Contacts {
 		
 		/**
 		* Get the world manifold.
+		* @param worldManifold World manifold out.
 		* @return World manifold.
 		**/
 		public GetWorldManifold(worldManifold: b2Collision.b2WorldManifold): void;
@@ -100,13 +101,13 @@ module Box2D.Dynamics.Contacts {
 		
 		/**
 		* Enable/disable this contact. This can be used inside the pre-solve contact listener. The contact is only disabled for the current time step (or sub-step in continuous collision).
-		* @flag True to enable, false to disable.
+		* @param flag True to enable, false to disable.
 		**/
 		public SetEnabled(flag: bool): void;
 
 		/**
 		* Change this to be a sensor or-non-sensor contact.
-		* @sensor True to be sensor, false to not be a sensor.
+		* @param sensor True to be sensor, false to not be a sensor.
 		**/
 		public SetSensor(sensor: bool): void;
 	}

@@ -53,20 +53,21 @@ module Box2D.Dynamics.Joints {
 
 		/**
 		* Get the reaction force on body2 at the joint anchor in N.
-		* @inv_dt
+		* @param inv_dt
 		* @return Reaction force in N.
 		**/
 		public GetReactionForce(inv_dt: number): b2Math.b2Vec2;
 
 		/**
 		* Get the reaction torque on body 2 in N.
+		* @param inv_dt
 		* @return Reaction torque in N.
 		**/
 		public GetReactionTorque(inv_dt: number): number;
 
 		/**
 		* Set the gear ratio.
-		* @force New gear ratio.
+		* @param force New gear ratio.
 		**/
 		public SetRatio(ratio: number): void;
 	}

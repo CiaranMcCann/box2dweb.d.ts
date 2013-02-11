@@ -37,28 +37,30 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Creates a new edge shape.
+		* @param v1 First vertex
+		* @param v2 Second vertex
 		**/
 		constructor (v1: b2Math.b2Vec2, v2: b2Math.b2Vec2);
 
 		/**
 		* Given a transform, compute the associated axis aligned bounding box for this shape.
-		* @aabb Calculated AABB, this argument is `out`.
-		* @xf Transform to calculate the AABB.
+		* @param aabb Calculated AABB, this argument is `out`.
+		* @param xf Transform to calculate the AABB.
 		**/
 		public ComputeAABB(aabb: b2AABB, xf: b2Math.b2Transform): void;
 
 		/**
 		* Compute the mass properties of this shape using its dimensions and density. The inertia tensor is computed about the local origin, not the centroid.
-		* @massData Calculate the mass, this argument is `out`.
+		* @param massData Calculate the mass, this argument is `out`.
 		**/
 		public ComputeMass(massData: b2MassData, density: number): void;
 
 		/**
 		* Compute the volume and centroid of this shape intersected with a half plane
-		* @normal The surface normal.
-		* @offset The surface offset along the normal.
-		* @xf The shape transform.
-		* @c The centroid, this argument is `out`.
+		* @param normal The surface normal.
+		* @param offset The surface offset along the normal.
+		* @param xf The shape transform.
+		* @param c The centroid, this argument is `out`.
 		**/
 		public ComputeSubmergedArea(
 			normal: b2Math.b2Vec2,
@@ -134,6 +136,7 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Get the first vertex and apply the supplied transform.
+		* @param xf Transform to apply.
 		* @return First vertex with xf transform applied.
 		**/
 		public GetFirstVertex(xf: b2Math.b2Transform): b2Math.b2Vec2;
@@ -152,18 +155,18 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Get the support point in the given world direction with the supplied transform.
-		* @xf Transform to apply.
-		* @dX X world direction.
-		* @dY Y world direction.
+		* @param xf Transform to apply.
+		* @param dX X world direction.
+		* @param dY Y world direction.
 		* @return Support point.
 		**/
 		public Support(xf: b2Math.b2Transform, dX: number, dY: number): b2Math.b2Vec2;
 
 		/**
 		* Cast a ray against this shape.
-		* @output Ray cast results, this argument is `out`.
-		* @input Ray cast input parameters.
-		* @transform The transform to be applied to the shape.
+		* @param output Ray cast results, this argument is `out`.
+		* @param input Ray cast input parameters.
+		* @param transform The transform to be applied to the shape.
 		* @return True if the ray hits the shape, otherwise false.
 		**/
 		public RayCast(
@@ -173,8 +176,8 @@ module Box2D.Collision.Shapes {
 
 		/**
 		* Test a point for containment in this shape. This only works for convex shapes.
-		* @xf Shape world transform.
-		* @p Point to test against, in world coordinates.
+		* @param xf Shape world transform.
+		* @param p Point to test against, in world coordinates.
 		* @return True if the point is in this shape, otherwise false.
 		**/
 		public TestPoint(xf: b2Math.b2Transform, p: b2Math.b2Vec2): bool;

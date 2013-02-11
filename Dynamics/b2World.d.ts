@@ -63,14 +63,14 @@ module Box2D.Dynamics {
 
 		/**
 		* Creates a new world.
-		* @gravity The world gravity vector.
-		* @doSleep Improvie performance by not simulating inactive bodies.
+		* @param gravity The world gravity vector.
+		* @param doSleep Improvie performance by not simulating inactive bodies.
 		**/
 		constructor(gravity: b2Math.b2Vec2, doSleep: bool);
 
 		/**
 		* Add a controller to the world list.
-		* @c Controller to add.
+		* @param c Controller to add.
 		* @return Controller that was added to the world.
 		**/
 		public AddController(c: Controllers.b2Controller): Controllers.b2Controller;
@@ -82,14 +82,14 @@ module Box2D.Dynamics {
 
 		/**
 		* Create a rigid body given a definition. No reference to the definition is retained.
-		* @def Body's definition.
+		* @param def Body's definition.
 		* @return Created rigid body.
 		**/
 		public CreateBody(def: b2BodyDef): b2Body;
 
 		/**
 		* Creates a new controller.
-		* @controller New controller.
+		* @param controller New controller.
 		* @return New controller.
 		**/
 		public CreateController(controller: Controllers.b2Controller): Controllers.b2Controller;
@@ -97,14 +97,14 @@ module Box2D.Dynamics {
 		/**
 		* Create a joint to constrain bodies together. No reference to the definition is retained. This may cause the connected bodies to cease colliding.
 		* @warning This function is locked during callbacks.
-		* @def Joint definition.
+		* @param def Joint definition.
 		* @return New created joint.
 		**/
 		public CreateJoint(def: Joints.b2JointDef): Joints.b2Joint;
 
 		/**
 		* Destroy a rigid body given a definition. No reference to the definition is retained. This function is locked during callbacks.
-		* @b Body to destroy.
+		* @param b Body to destroy.
 		* @warning This function is locked during callbacks.
 		**/
 		public DestroyBody(b: b2Body): void;
@@ -112,13 +112,13 @@ module Box2D.Dynamics {
 		/**
 		* Destroy a controller given the controller instance.
 		* @warning This function is locked during callbacks.
-		* @controller Controller to destroy.
+		* @param controller Controller to destroy.
 		**/
 		public DestroyController(controller: Controllers.b2Controller): void;
 
 		/**
 		* Destroy a joint. This may cause the connected bodies to begin colliding.
-		* @j Joint to destroy.
+		* @param j Joint to destroy.
 		**/
 		public DestroyJoint(j: Joints.b2Joint): void;
 
@@ -189,31 +189,31 @@ module Box2D.Dynamics {
 
 		/**
 		* Query the world for all fixtures that potentially overlap the provided AABB.
-		* @callback  A user implemented callback class. It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
-		* @aabb The query bounding box.
+		* @param callback  A user implemented callback class. It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
+		* @param aabb The query bounding box.
 		**/
 		public QueryAABB(callback: (fixutre: b2Fixture) => bool, aabb: b2Collision.b2AABB): void;
 
 		/**
 		* Query the world for all fixtures that contain a point.
 		* @note This provides a feature specific to this port.
-		* @callback A user implemented callback class.  It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
-		* @p The query point.
+		* @param callback A user implemented callback class.  It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
+		* @param p The query point.
 		**/
 		public QueryPoint(callback: (fixture: b2Fixture) => bool, p: b2Math.b2Vec2): void;
 
 		/**
 		* Query the world for all fixtures that precisely overlap the provided transformed shape.
 		* @note This provides a feature specific to this port.
-		* @callback A user implemented callback class.  It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
-		* @shape The query shape.
-		* @transform Optional transform, default = null.
+		* @param callback A user implemented callback class.  It should match signature function Callback(fixture:b2Fixture):Boolean.  Return true to continue to the next fixture.
+		* @param shape The query shape.
+		* @param transform Optional transform, default = null.
 		**/
 		public QueryShape(callback: (fixture: b2Fixture) => bool, shape: b2Shapes.b2Shape, transform?: b2Math.b2Transform): void;
 
 		/**
 		* Ray-cast the world for all fixtures in the path of the ray. Your callback Controls whether you get the closest point, any point, or n-points The ray-cast ignores shapes that contain the starting point.
-		* @callback A callback function which must be of signature: 
+		* @param callback A callback function which must be of signature: 
 		*	function Callback(
 		*		fixture:b2Fixture,	// The fixture hit by the ray 
 		*		point:b2Vec2,		// The point of initial intersection 
@@ -221,87 +221,87 @@ module Box2D.Dynamics {
 		*		fraction:Number		// The fractional length along the ray of the intersection
 		*	 ):Number
 		*	 Callback should return the new length of the ray as a fraction of the original length. By returning 0, you immediately terminate. By returning 1, you continue wiht the original ray. By returning the current fraction, you proceed to find the closest point.
-		* @point1 The ray starting point.
-		* @point2 The ray ending point.
+		* @param point1 The ray starting point.
+		* @param point2 The ray ending point.
 		**/
 		public RayCast(callback: (fixture: b2Fixture, point: b2Math.b2Vec2, normal: b2Math.b2Vec2, fraction: number) => number, point1: b2Math.b2Vec2, point2: b2Math.b2Vec2): void;
 
 		/**
 		* Ray-cast the world for all fixture in the path of the ray.
-		* @point1 The ray starting point.
-		* @point2 The ray ending point.
+		* @param point1 The ray starting point.
+		* @param point2 The ray ending point.
 		* @return Array of all the fixtures intersected by the ray.
 		**/
 		public RayCastAll(point1: b2Math.b2Vec2, point2: b2Math.b2Vec2): b2Fixture[];
 
 		/**
 		* Ray-cast the world for the first fixture in the path of the ray.
-		* @point1 The ray starting point.
-		* @point2 The ray ending point.
+		* @param point1 The ray starting point.
+		* @param point2 The ray ending point.
 		* @return First fixture intersected by the ray.
 		**/
 		public RayCastOne(point1: b2Math.b2Vec2, point2: b2Math.b2Vec2): b2Fixture;
 
 		/**
 		* Removes the controller from the world.
-		* @c Controller to remove.
+		* @param c Controller to remove.
 		**/
 		public RemoveController(c: Controllers.b2Controller): void;
 
 		/**
 		* Use the given object as a broadphase. The old broadphase will not be cleanly emptied.
 		* @warning This function is locked during callbacks.
-		* @broadphase: Broad phase implementation.
+		* @param broadphase: Broad phase implementation.
 		**/
 		public SetBroadPhase(broadPhase: b2Collision.IBroadPhase): void;
 
 		/**
 		* Register a contact filter to provide specific control over collision. Otherwise the default filter is used (b2_defaultFilter).
-		* @filter Contact filter'er.
+		* @param filter Contact filter'er.
 		**/
 		public SetContactFilter(filter: b2ContactFilter): void;
 
 		/**
 		* Register a contact event listener.
-		* @listener Contact event listener.
+		* @param listener Contact event listener.
 		**/
 		public SetContactListener(listener: b2ContactListener): void;
 
 		/**
 		* Enable/disable continuous physics. For testing.
-		* @flag True for continuous physics, otherwise false.
+		* @param flag True for continuous physics, otherwise false.
 		**/
 		public SetContinuousPhysics(flag: bool): void;
 
 		/**
 		* Register a routine for debug drawing. The debug draw functions are called inside the b2World::Step method, so make sure your renderer is ready to consume draw commands when you call Step().
-		* @debugDraw Debug drawing instance.
+		* @param debugDraw Debug drawing instance.
 		**/
 		public SetDebugDraw(debugDraw: b2DebugDraw): void;
 		
 		/**
 		* Destruct the world. All physics entities are destroyed and all heap memory is released.
-		* @listener Destruction listener instance.
+		* @param listener Destruction listener instance.
 		**/
 		public SetDestructionListener(listener: b2DestructionListener): void;
 
 		/**
 		* Change the global gravity vector.
-		* @gravity New global gravity vector.
+		* @param gravity New global gravity vector.
 		**/
 		public SetGravity(gravity: b2Math.b2Vec2): void;
 
 		/**
 		* Enable/disable warm starting. For testing.
-		* @flag True for warm starting, otherwise false.
+		* @param flag True for warm starting, otherwise false.
 		**/
 		public SetWarmStarting(flag: bool): void;
 
 		/**
 		* Take a time step. This performs collision detection, integration, and constraint solution.
-		* @dt The amout of time to simulate, this should not vary.
-		* @velocityIterations For the velocity constraint solver.
-		* @positionIterations For the position constraint solver.
+		* @param dt The amout of time to simulate, this should not vary.
+		* @param velocityIterations For the velocity constraint solver.
+		* @param positionIterations For the position constraint solver.
 		**/
 		public Step(dt: number, velocityIterations: number, positionIterations: number): void;
 

@@ -42,8 +42,8 @@ module Box2D.Common.Math {
 
 		/**
 		* Creates a new vector 2.
-		* @x x value, default = 0.
-		* @y y value, default = 0.
+		* @param x x value, default = 0.
+		* @param y y value, default = 0.
 		**/
 		constructor (x?: number, y?: number);
 
@@ -54,7 +54,7 @@ module Box2D.Common.Math {
 
 		/**
 		* Adds the vector 2 to this vector 2.  The result is stored in this vector 2.
-		* @v Vector 2 to add.
+		* @param v Vector 2 to add.
 		**/
 		public Add(v: b2Vec2): void;
 
@@ -66,13 +66,13 @@ module Box2D.Common.Math {
 
 		/**
 		* Cross F V
-		* @s
+		* @param s
 		**/
 		public CrossFV(s: number): void;
 
 		/**
 		* Cross V F
-		* @s
+		* @param s
 		**/
 		public CrossVF(s: number): void;
 
@@ -102,38 +102,38 @@ module Box2D.Common.Math {
 
 		/**
 		* Creates a new vector 2 from the given values.
-		* @x x value.
-		* @y y value.
+		* @param x x value.
+		* @param y y value.
 		**/
 		public static Make(x: number, y: number): b2Vec2;
 
 		/**
 		* Calculates which vector has the maximum values and sets this vector to those values.
-		* @b Vector 2 to compare for maximum values.
+		* @param b Vector 2 to compare for maximum values.
 		**/
 		public MaxV(b: b2Vec2): void;
 
 		/**
 		* Calculates which vector has the minimum values and sets this vector to those values.
-		* @b Vector 2 to compare for minimum values.
+		* @param b Vector 2 to compare for minimum values.
 		**/
 		public MinV(b: b2Vec2): void;
 
 		/**
 		* Matrix multiplication.  Stores the result in this vector 2.
-		* @A Matrix to muliply by.
+		* @param A Matrix to muliply by.
 		**/
 		public MulM(A: b2Mat22): void;
 
 		/**
 		* Vector multiplication.  Stores the result in this vector 2.
-		* @a Value to multiple the vector's values by.
+		* @param a Value to multiple the vector's values by.
 		**/
 		public Multiply(a: number): void;
 
 		/**
 		* Dot product multiplication.  Stores the result in this vector 2.
-		* @A Matrix to multiply by.
+		* @param A Matrix to multiply by.
 		**/
 		public MulTM(A: b2Mat22): void;
 
@@ -150,14 +150,14 @@ module Box2D.Common.Math {
 
 		/**
 		* Sets the vector 2.
-		* @x x value, default is 0.
-		* @y y value, default is 0.
+		* @param x x value, default is 0.
+		* @param y y value, default is 0.
 		**/
 		public Set(x?: number, y?: number): void;
 
 		/**
 		* Sets the vector 2 from a vector 2.
-		* @v Vector 2 to copy values from.
+		* @param v Vector 2 to copy values from.
 		**/
 		public SetV(v: b2Vec2): void;
 
@@ -168,7 +168,7 @@ module Box2D.Common.Math {
 
 		/**
 		* Subtracts the vector 2 from this vector 2.  The result is stored in this vector 2.
-		* @v Vector 2 to subtract.
+		* @param v Vector 2 to subtract.
 		**/
 		public Subtract(v: b2Vec2): void;
 	}

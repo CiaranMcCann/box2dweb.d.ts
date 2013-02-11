@@ -90,7 +90,7 @@ module Box2D.Collision {
 
 		/**
 		* Sets this manifold from another manifold.
-		* @m Manifold to copy values from.
+		* @param m Manifold to copy values from.
 		**/
 		public Set(m: b2Manifold): void;
 	}

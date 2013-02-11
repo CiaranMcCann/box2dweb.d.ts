@@ -45,22 +45,22 @@ module Box2D.Collision {
 
 		/**
 		* Combines two AABBs into one with max values for upper bound and min values for lower bound.
-		* @aabb1 First AABB to combine.
-		* @aabb2 Second AABB to combine.
+		* @param aabb1 First AABB to combine.
+		* @param aabb2 Second AABB to combine.
 		* @return New AABB with max values from aabb1 and aabb2.
 		**/
 		public static Combine(aabb1: b2AABB, aabb2: b2AABB): b2AABB;
 
 		/**
 		* Combines two AABBs into one with max values for upper bound and min values for lower bound.  The result is stored in this AABB.
-		* @aabb1 First AABB to combine.
-		* @aabb2 Second AABB to combine.
+		* @param aabb1 First AABB to combine.
+		* @param aabb2 Second AABB to combine.
 		**/
 		public Combine(aabb1: b2AABB, aabb2: b2AABB): void;
 
 		/**
 		* Determines if an AABB is contained within this one.
-		* @aabb AABB to see if it is contained.
+		* @param aabb AABB to see if it is contained.
 		* @return True if aabb is contained, otherwise false.
 		**/
 		public Contains(aabb: b2AABB): bool;
@@ -85,15 +85,15 @@ module Box2D.Collision {
 
 		/**
 		* Perform a precise raycast against this AABB.
-		* @output Ray cast output values.
-		* @input Ray cast input values.
+		* @param output Ray cast output values.
+		* @param input Ray cast input values.
 		* @return True if the ray cast hits this AABB, otherwise false.
 		**/
 		public RayCast(output: b2RayCastOutput, input: b2RayCastInput): bool;
 
 		/**
 		* Tests if another AABB overlaps this AABB.
-		* @other Other AABB to test for overlap.
+		* @param other Other AABB to test for overlap.
 		* @return True if other overlaps this AABB, otherwise false.
 		**/
 		public TestOverlap(other: b2AABB): bool;

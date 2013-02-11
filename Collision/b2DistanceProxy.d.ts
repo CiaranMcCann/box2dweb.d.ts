@@ -49,20 +49,21 @@ module Box2D.Collision {
 
 		/**
 		* Get the supporting vertex index in the given direction.
-		* @d Direction to look for the supporting vertex.
+		* @param d Direction to look for the supporting vertex.
 		* @return Supporting vertex index.
 		**/
 		public GetSupport(d: b2Math.b2Vec2): number;
 
 		/**
 		* Get the supporting vertex in the given direction.
-		* @d Direction to look for the supporting vertex.
+		* @param d Direction to look for the supporting vertex.
 		* @return Supporting vertex.
 		**/
 		public GetSupportVertex(d: b2Math.b2Vec2): b2Math.b2Vec2;
 
 		/**
 		* Get a vertex by index.  Used by b2Distance.
+		* @param index Vetex's index.
 		* @return Vertex at the given index.
 		**/
 		public GetVertex(index: number): b2Math.b2Vec2;
@@ -75,7 +76,7 @@ module Box2D.Collision {
 
 		/**
 		* Initialize the proxy using the given shape. The shape must remain in scope while the proxy is in use.
-		* @shape Shape to initialize the distance proxy.
+		* @param shape Shape to initialize the distance proxy.
 		**/
 		public Set(shape: Shapes.b2Shape): void;
 	}
