@@ -59,7 +59,7 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="box2dweb.d.ts" />
+    <TypeScriptCompile Include="box2dweb.d.ts" />
     <TypeScriptCompile Include="Collision\Shapes\b2CircleShape.d.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -83,7 +83,7 @@
     </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="box2dweb-min.d.ts" />
+    <None Include="box2dweb-min.d.ts" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
