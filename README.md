@@ -7,11 +7,67 @@ This is a typescript definitions file for box2dweb.js located here: http://code.
 
 There are a few ports of Box2D to javascript, I have specifically picked box2dweb.js since it has zero dependencies and can be linked to your project via a single file.  It also appears to be the most up to date with box2d and is a direct automated port from Box2DFlash (http://www.box2dflash.org/)
 
+Basic Usage
+==========
 
-This project organizes the typescript definitions in the originl Box2D directory and file structure for easy modification.  However there is a 'min' version provided that includes all of the files packed into a single definition file.  To include in your project simply reference the 'box2dweb-min.d.ts' file:
-```javascript
-/// <reference path="box2dweb-min.d.ts" />
+Import Statements
+-----------------
+
+Reference the box2dweb.d.ts file in your project and in an appropriate location include the following import statements to reduce the amount of typing you will need to do to acccess deeply nested modules.
+
+```typescript
+/// <reference path="box2dweb.d.ts" />
+
+// Include the following imports, or add more/less, to reduce the module nesting.
+import b2Common = Box2D.Common;
+import b2Math = Box2D.Common.Math;
+import b2Collision = Box2D.Collision;
+import b2Shapes = Box2D.Collision.Shapes;
+import b2Dynamics = Box2D.Dynamics;
+import b2Contacts = Box2D.Dynamics.Contacts;
+import b2Controllers = Box2D.Dynamics.Controllers;
+import b2Joints = Box2D.Dynamics.Joints;
 ```
+
+Debug Drawing
+-------------
+
+Notes from Box2DWeb
+
+Although Box2D is a physics engine and therefore has nothing to do with drawing, Box2dFlash provides such methods for debugging which are defined in the b2DebugDraw class. In Box2dWeb, a b2DebugDraw takes a canvas-context instead of a Sprite:
+
+```typescript
+var debugDraw = new Box2D.Dynamics.b2DebugDraw();
+debugDraw.SetSprite(document.getElementsByTagName("canvas")[0].getContext("2d"));
+```
+
+Events
+------
+
+Notes from Box2DWeb
+
+You have to implement event-interfaces in Box2dFlash. Since Javascript doesn't support classical inheritance natively, I show you how to deal with events in Box2dWeb:
+```typescript
+var world = new Box2D.Dynamics.b2World(new Box2D.Common.Math.b2Vec2(0, 10), true);
+
+/* ... add bodies, etc. ... */
+
+var myListener = new Box2D.Dynamics.b2DestructionListener;
+
+myListener.SayGoodbyeFixture = function(fixture) {
+   alert("goodbye fixture ...");
+}
+
+world.SetDestructionListener(myListener);
+```
+
+Change Log
+==========
+
+2.1a 2013/06/28
+---------------
+* Upgraded to TypeScript v0.9
+* Removed import statements so the user can now declare the smaller namespaces in their code.  Before the import statements were not 'exported', so they appeared as 'any' objects.
 
 
 License
