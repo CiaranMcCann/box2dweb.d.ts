@@ -7,6 +7,8 @@ This is a typescript definitions file for box2dweb.js located here: http://code.
 
 There are a few ports of Box2D to javascript, I have specifically picked box2dweb.js since it has zero dependencies and can be linked to your project via a single file.  It also appears to be the most up to date with box2d and is a direct automated port from Box2DFlash (http://www.box2dflash.org/)
 
+This definitions file can be found on https://github.com/borisyankov/DefinitelyTyped.
+
 Basic Usage
 ==========
 
