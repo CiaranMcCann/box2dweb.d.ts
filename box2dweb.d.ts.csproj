@@ -62,10 +62,10 @@
     <TypeScriptCompile Include="box2dweb.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="test\box2dweb-test.ts" />
+    <TypeScriptCompile Include="box2dweb-test.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="test\box2dweb-test.js">
+    <Content Include="box2dweb-test.js">
       <DependentUpon>box2dweb-test.ts</DependentUpon>
     </Content>
   </ItemGroup>
